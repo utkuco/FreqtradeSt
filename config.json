@@ -92,7 +92,7 @@
         "chat_id": "-1001428606204"
     },
     "api_server": {
-        "enabled": false,
+        "enabled": true,
         "listen_ip_address": "130.162.234.124",
         "listen_port": 8080,
         "verbosity": "error",
