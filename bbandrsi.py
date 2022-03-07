@@ -22,14 +22,14 @@ class BbandRsi(IStrategy):
     # adjust based on market conditions. We would recommend to keep it low for quick turn arounds
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
-        "0": 0.1
+        "0": 100
     }
 
     # Optimal stoploss designed for the strategy
-    stoploss = -0.25
+    stoploss = -0.1
 
     # Optimal timeframe for the strategy
-    timeframe = '1h'
+    timeframe = '5m'
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe['rsi'] = ta.RSI(dataframe, timeperiod=14)
