@@ -14,8 +14,8 @@ from functools import reduce
 from freqtrade.strategy import (BooleanParameter, CategoricalParameter, DecimalParameter,IStrategy, IntParameter)
 
 class vulcan(IStrategy):
-    stoploss = -0.25
-    timeframe = "30m"
+    stoploss = -0.32
+    timeframe = "4h"
     minimal_roi = {"0":  100}
 
     plot_config = {
@@ -70,7 +70,7 @@ class vulcan(IStrategy):
                 (dataframe["close"] > dataframe["SMA"])
                 & (dataframe["growing_SMA"])
                 & (dataframe["RSI"] > dataframe["RSI_SMA"])
-                & (dataframe["RSI"] > 50)
+                & (dataframe["RSI"] > 66)
             ),
             "buy",
         ] = 1
