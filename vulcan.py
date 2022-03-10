@@ -44,7 +44,7 @@ class vulcan(IStrategy):
             & (dataframe["SMA"].shift(1) > dataframe["SMA"].shift(2))
             & (dataframe["SMA"].shift(2) > dataframe["SMA"].shift(3))
         )
-               stoch = ta.STOCH(
+        stoch = ta.STOCH(
             dataframe,
             fastk_period=14,
             slowk_period=4,
