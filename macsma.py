@@ -12,7 +12,7 @@ import freqtrade.vendor.qtpylib.indicators as qtpylib
 
 # --- Generic strategy settings ---
 
-class smamacdcrossover(IStrategy):
+class macsma(IStrategy):
     INTERFACE_VERSION = 2
     
     # Determine timeframe and # of candles before strategysignals becomes valid
